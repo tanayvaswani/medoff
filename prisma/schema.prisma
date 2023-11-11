@@ -13,11 +13,11 @@ datasource db {
 model Doctor {
   id            Int           @id @default(autoincrement())
   email         String        @unique
-  name          String
+  name          String        @default("Dr. ")
   age           Int
   bio           String        @default("Qualifications: and Specialist: ")
   gender        String
-  isAvailable   Boolean
+  isAvailable   Boolean       @default(false)
   yoe           Int
   consultingFee Int
   ratings       Float         @default(0.0)
@@ -35,7 +35,7 @@ model Patient {
   weight      Int           @default(0)
   height      Int           @default(100)
   role        Role          @default(PATIENT)
-  
+
   appointment Appointment[]
 }
 
