@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "medoff",
+  title: "Medoff - The Open Source Medical App",
   description: "Your one place medical app.",
 };
 
