@@ -10,7 +10,7 @@ const schema = z.object({
     yoe: z.number().min(3),
     consultingFee: z.number(),
     rating: z.number().multipleOf(0.1),
-    role: z.string(),
+    role: z.enum(["DOCTOR"]),
 });
 
 export default schema;
