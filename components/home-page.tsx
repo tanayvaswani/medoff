@@ -194,8 +194,8 @@ const HomePage = () => {
       ></motion.canvas>
       <div className="h-[60px] bg-[#1D2B3A] fixed bottom-0 z-20 w-full flex flex-row px-[2rem]">
         <p className="text-white/80 text-base md:text-lg font-semibold md:leading-[60px] whitespace-nowrap flex flex-row">
-          Meet Doctors from All over the World! Because not all wounds are
-          visible, we are dedicated to healing the unseen.
+          Meet Doctors from All over the World, because not all wounds are
+          visible, we are dedicated to heal the unseen.
         </p>
       </div>
     </div>

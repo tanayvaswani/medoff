@@ -5,6 +5,7 @@ import temp from "medoff/public/temp.jpg";
 import Link from "next/link";
 import { gradient } from "medoff/components/gradient";
 import { motion } from "framer-motion";
+import Header from "medoff/components/header";
 
 export default function IndexPage() {
   useEffect(() => {
@@ -13,7 +14,17 @@ export default function IndexPage() {
 
   return (
     <div>
-      <div className="mx-auto max-w-8xl py-20 sm:px-6 sm:py-16 lg:px-8">
+      <Header />
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.15,
+          duration: 0.95,
+          ease: [0.165, 0.84, 0.44, 1],
+        }}
+        className="mx-auto max-w-6xl py-20 sm:px-6 sm:py-20 lg:px-8"
+      >
         <div className="relative isolate overflow-hidden bg-[#1D2B3A] px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
           <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -50,7 +61,7 @@ export default function IndexPage() {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
       <motion.canvas
         initial={{
           filter: "blur(20px)",
@@ -70,10 +81,10 @@ export default function IndexPage() {
         data-transition-in
         className="z-[-1] fixed top-0 right-[-2px] w-[80%] md:w-1/2 h-screen bg-[#c3e4ff]"
       ></motion.canvas>
-      <div className="h-[60px] bg-[#1D2B3A] fixed bottom-0 z-20 w-full flex flex-row px-[2rem]">
+      <div className="h-[60px] bg-[#1D2B3A] fixed bottom-0 z-[-2] w-full flex flex-row px-[2rem]">
         <p className="text-white/80 text-base md:text-lg font-semibold md:leading-[60px] whitespace-nowrap flex flex-row">
-          Meet Doctors from All over the World, Because not all wounds are
-          visible, we are dedicated to healing the unseen.
+          Meet Doctors from All over the World, because not all wounds are
+          visible, we are dedicated to heal the unseen.
         </p>
       </div>
     </div>
