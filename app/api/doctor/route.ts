@@ -34,9 +34,8 @@ export async function POST(request: NextRequest) {
       yoe: body.yoe,
       consultingFee: body.consultingFee,
       ratings: body.rating,
-      role: body.role,
     },
   });
 
-  return NextResponse.json(newDoctor, { status: 201 });
+  return NextResponse.json(newDoctor, { status: 200 });
 }

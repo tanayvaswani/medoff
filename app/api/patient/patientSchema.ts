@@ -7,7 +7,6 @@ const patientSchema = z.object({
   gender: z.enum(["male", "female", "binary"]),
   weight: z.number().min(8),
   height: z.number().min(60),
-  role: z.enum(["PATIENT"]),
 });
 
 export default patientSchema;

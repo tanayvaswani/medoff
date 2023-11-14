@@ -13,9 +13,9 @@ datasource db {
 model Doctor {
   id            Int           @id @default(autoincrement())
   email         String        @unique
-  name          String        @default("Dr. ")
+  name          String        
   age           Int
-  bio           String        @default("Qualifications: and Specialist: ")
+  bio           String        
   gender        String
   isAvailable   Boolean       @default(false)
   yoe           Int
@@ -32,17 +32,17 @@ model Patient {
   name        String
   age         Int
   gender      String
-  weight      Int           @default(0)
-  height      Int           @default(100)
+  weight      Int           
+  height      Int           
   role        Role          @default(PATIENT)
 
-  appointment Appointment[]
+  appointment Appointment[] 
 }
 
 model Appointment {
   id        Int      @id @default(autoincrement())
   appointAt DateTime
-  fees      Int
+  fees      Int      @default(600) 
 
   patientId Int
   patient   Patient @relation(fields: [patientId], references: [id])
