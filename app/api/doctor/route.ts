@@ -23,18 +23,20 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(validation.error.errors, { status: 400 });
   }
 
-  const newDoctor = {
-    email: body.email,
-    name: body.name,
-    age: body.age,
-    bio: body.bio,
-    gender: body.gender,
-    isAvailable: body.isAvailable,
-    yoe: body.yoe,
-    consultingFee: body.consultingFee,
-    rating: body.rating,
-    role: body.role,
-  };
+  const newDoctor = await prisma.doctor.create({
+    data: {
+      email: body.email,
+      name: body.name,
+      age: body.age,
+      bio: body.bio,
+      gender: body.gender,
+      isAvailable: body.isAvailable,
+      yoe: body.yoe,
+      consultingFee: body.consultingFee,
+      ratings: body.rating,
+      role: body.role,
+    },
+  });
 
   return NextResponse.json(newDoctor, { status: 201 });
 }

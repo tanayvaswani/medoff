@@ -9,7 +9,7 @@ const doctorSchema = z.object({
     isAvailable: z.boolean(),
     yoe: z.number().min(3),
     consultingFee: z.number(),
-    rating: z.number().multipleOf(0.1),
+    ratings: z.number().multipleOf(0.1),
     role: z.enum(["DOCTOR"]),
 });
 
