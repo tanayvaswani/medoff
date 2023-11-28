@@ -11,47 +11,13 @@ datasource db {
 }
 
 model Doctor {
-  id            Int           @id @default(autoincrement())
-  email         String        @unique
-  name          String        
-  age           Int
-  bio           String        
-  gender        String
-  isAvailable   Boolean       @default(false)
-  yoe           Int
-  consultingFee Int
-  ratings       Float         @default(0.0)
-  role          Role          @default(DOCTOR)
-
-  appointment   Appointment[]
+  id    Int    @id @default(autoincrement())
+  email String @unique
+  name  String
 }
 
 model Patient {
-  id          Int           @id @default(autoincrement())
-  email       String        @unique
-  name        String
-  age         Int
-  gender      String
-  weight      Int           
-  height      Int           
-  role        Role          @default(PATIENT)
-
-  appointment Appointment[] 
-}
-
-model Appointment {
-  id        Int      @id @default(autoincrement())
-  appointAt DateTime
-  fees      Int      @default(600) 
-
-  patientId Int
-  patient   Patient @relation(fields: [patientId], references: [id])
-
-  doctorId Int
-  doctor   Doctor @relation(fields: [doctorId], references: [id])
-}
-
-enum Role {
-  DOCTOR
-  PATIENT
+  id    Int    @id @default(autoincrement())
+  email String @unique
+  name  String
 }
