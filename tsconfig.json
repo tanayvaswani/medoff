@@ -19,7 +19,7 @@
       }
     ],
     "paths": {
-      "medoff/*": ["./*"]
+      "@/*": ["./*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/gradient.js"],
