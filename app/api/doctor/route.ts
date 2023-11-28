@@ -2,9 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import doctorSchema from "./doctorSchema";
 import prisma from "medoff/prisma/client";
 
-// @desc Get all doctors
+// @desc Get all available doctors 
 // @route GET /api/doctor
-// @access private
+// @access public
 export async function GET(request: NextRequest) {
   const doctors = await prisma.doctor.findMany();
   if (!doctors) {
@@ -27,13 +27,6 @@ export async function POST(request: NextRequest) {
     data: {
       email: body.email,
       name: body.name,
-      age: body.age,
-      bio: body.bio,
-      gender: body.gender,
-      isAvailable: body.isAvailable,
-      yoe: body.yoe,
-      consultingFee: body.consultingFee,
-      ratings: body.rating,
     },
   });
 

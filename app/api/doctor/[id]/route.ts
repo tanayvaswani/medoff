@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import doctorSchema from "../doctorSchema";
 import prisma from "medoff/prisma/client";
 
+// @desc See particular doctor profile
+// @route GET /api/doctor/:id
+// @access public
 export async function GET(
   request: NextRequest,
   { params }: { params: { id: string } }
@@ -17,6 +20,9 @@ export async function GET(
   return NextResponse.json(doctor);
 }
 
+// @desc Update doctor profile
+// @route PUT /api/doctor/:id
+// @access private
 export async function PUT(
   request: NextRequest,
   { params }: { params: { id: string } }
@@ -39,13 +45,6 @@ export async function PUT(
     data: {
       email: body.email,
       name: body.name,
-      age: body.age,
-      bio: body.bio,
-      gender: body.gender,
-      isAvailable: body.isAvailable,
-      yoe: body.yoe,
-      consultingFee: body.consultingFee,
-      ratings: body.rating,
     },
   });
   return NextResponse.json(updatedDoctorProfile, { status: 201 });
