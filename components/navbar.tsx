@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between w-full py-4 px-4 shadow-sm shadow-blue-600 backdrop-blur-sm">
+    <div className="flex items-center justify-between w-full py-4 px-4 shadow-sm shadow-blue-600 backdrop-blur-sm fixed">
       <Link href="/" className="text-2xl font-bold hover:text-blue-600">
         medoff
       </Link>

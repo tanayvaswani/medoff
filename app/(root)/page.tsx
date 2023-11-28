@@ -1,11 +1,13 @@
 import { Background } from "@/components/background";
-import Navbar from "@/components/navbar";
+import Heading from "@/components/heading";
 
 const HomePage = () => {
   return (
     <div>
       <Background />
-      <Navbar />
+      <div className="flex w-full items-center justify-center mt-40">
+        <Heading />
+      </div>
     </div>
   );
 };
