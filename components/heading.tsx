@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Heading = () => {
   return (
     <motion.h1
-      className="text-6xl text-blue-600 md:text-8xl"
+      className="text-6xl text-blue-600 font-bold md:text-8xl"
       initial={{ scale: 0.9, opacity: 0, x: 0 }}
       animate={{ scale: 1, opacity: 100, x: 0 }}
       transition={{
