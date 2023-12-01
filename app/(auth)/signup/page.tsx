@@ -1,9 +1,5 @@
-const SignupPage = () => {
-    return ( 
-        <div>
-            Signup Page
-        </div>
-     );
+import Form from "./form";
+
+export default async function SignupPage() {
+  return <Form />;
 }
- 
-export default SignupPage;
