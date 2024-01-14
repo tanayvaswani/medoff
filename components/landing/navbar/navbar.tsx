@@ -10,7 +10,7 @@ const Navbar = () => {
         medoff.
       </Link>
 
-      <ul className="hidden lg:flex gap-x-8 font-medium text-lg">
+      <ul className="hidden ml-10 lg:flex gap-x-8 font-medium text-lg">
         {navItems.map((item) => {
           return (
             <li key={item.id} className="hover:text-blue-600">

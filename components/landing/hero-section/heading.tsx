@@ -12,7 +12,7 @@ const poppins = Poppins({
 const Heading = () => {
   return (
     <motion.h1
-      className={cn("w-full my-2 flex items-center justify-center text-6xl text-blue-600 md:text-8xl", poppins.className)}
+      className={cn("w-full my-1 flex items-center justify-center text-5xl text-blue-600 md:text-6xl", poppins.className)}
       initial={{ scale: 0.9, opacity: 0, x: 0 }}
       animate={{ scale: 1, opacity: 100, x: 0 }}
       transition={{
@@ -22,7 +22,7 @@ const Heading = () => {
         delay: 0.5,
       }}
     >
-      medoff.
+      some heading...
     </motion.h1>
   );
 };
