@@ -1,8 +1,8 @@
 const Doctors = () => {
     return ( 
-        <div>
-            All doctors
-        </div>
+        <main>
+            Doctors Page
+        </main>
      );
 }
  
