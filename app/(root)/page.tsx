@@ -1,6 +1,6 @@
-import { Background } from "@/components/background";
-import Heading from "@/components/heading";
-import Quote from "@/components/quote";
+import { Background } from "@/components/ui/background";
+import Heading from "@/components/landing/heading";
+import Quote from "@/components/landing/quote";
 
 const HomePage = () => {
   return (
