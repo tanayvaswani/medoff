@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Noto_Sans } from "next/font/google";
 
 const notoSans = Noto_Sans({
-  weight: "400",
+  weight: "500",
   subsets: ["latin"],
 });
 
@@ -13,7 +13,7 @@ const Quote = () => {
   return (
     <motion.p
       className={cn(
-        "md:text-2xl text-center pt-2 text-blue-800",
+        "w-full flex items-center justify-center text-lg md:text-2xl text-center pt-2 text-blue-800",
         notoSans.className
       )}
       initial={{ scale: 0.9, opacity: 0 }}

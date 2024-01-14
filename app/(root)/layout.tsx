@@ -8,7 +8,7 @@ export default function HomeLayout({
   return (
     <main>
       <Navbar />
-      <section className="pt-20 h-full">{children}</section>
+      <section>{children}</section>
     </main>
   );
 }
