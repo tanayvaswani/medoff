@@ -4,13 +4,13 @@ import Quote from "@/components/quote";
 
 const HomePage = () => {
   return (
-    <div>
+    <section>
       <Background />
       <div className="flex flex-col w-full items-center justify-center mt-40">
         <Heading />
         <Quote />
       </div>
-    </div>
+    </section>
   );
 };
 

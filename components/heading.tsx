@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
-  weight: "600",
+  weight: "500",
   subsets: ["latin"],
 });
 
@@ -22,7 +22,7 @@ const Heading = () => {
         delay: 0.5,
       }}
     >
-      medoff
+      medoff.
     </motion.h1>
   );
 };

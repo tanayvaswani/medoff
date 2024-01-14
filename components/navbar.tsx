@@ -8,22 +8,16 @@ const Navbar = () => {
       <Link href="/" className="text-2xl font-bold hover:text-blue-600">
         medoff
       </Link>
+
       <div className="flex gap-x-2">
-        <Button
-          variant={"ghost"}
-          className="shadow-sm shadow-blue-500 hover:text-blue-600"
-          asChild
-        >
+        <Button variant={"medoffnative"} asChild>
           <Link href="/login">
             <LogIn className="h-4 w-4 mr-2 hidden md:block" />
             Login
           </Link>
         </Button>
-        <Button
-          variant={"ghost"}
-          className="shadow-sm shadow-blue-500 hover:text-blue-600"
-          asChild
-        >
+
+        <Button variant={"medoffnative"} asChild>
           <Link href="/signup">
             <User className="h-4 w-4 mr-2 hidden md:block" />
             Signup
