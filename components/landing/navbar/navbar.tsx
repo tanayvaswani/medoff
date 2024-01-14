@@ -10,10 +10,10 @@ const Navbar = () => {
         medoff.
       </Link>
 
-      <ul className="hidden lg:flex gap-x-6 font-medium text-lg">
+      <ul className="hidden lg:flex gap-x-8 font-medium text-lg">
         {navItems.map((item) => {
           return (
-            <li key={item.id}>
+            <li key={item.id} className="hover:text-blue-600">
               <Link href={item.source}>{item.name}</Link>
             </li>
           );

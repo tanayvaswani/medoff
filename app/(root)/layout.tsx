@@ -1,7 +1,4 @@
 import Navbar from "@/components/landing/navbar/navbar";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function HomeLayout({
   children,
@@ -9,9 +6,9 @@ export default function HomeLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className={inter.className}>
+    <main>
       <Navbar />
-      <div className="pt-20 h-full">{children}</div>
-    </div>
+      <section className="pt-20 h-full">{children}</section>
+    </main>
   );
 }
